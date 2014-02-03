@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -f ../parsedown
+rm -f ../markdown
 php create-phar.php
-mv ../parsedown.phar ../parsedown
-chmod a+x ../parsedown
+mv ../markdown.phar ../markdown
+chmod a+x ../markdown

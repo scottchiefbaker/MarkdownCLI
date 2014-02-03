@@ -26,6 +26,7 @@ print Parsedown::instance()->parse($str);
 function usage() {
 	global $version;
 
-	print "ParsedownCLI Version: $version\n\n";
+	print "MarkdownCLI Version: $version\n";
+	print "  Parsedown Version: $version\n\n";
 	print "Usage: parsedown input.md\n";
 }

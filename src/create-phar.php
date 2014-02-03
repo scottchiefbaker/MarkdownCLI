@@ -1,7 +1,7 @@
 <?php
 
 $buildRoot = "../";
-$app_name = 'parsedown';
+$app_name = 'markdown';
 
 $phar = new Phar($buildRoot . "/$app_name.phar", FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_FILENAME, "$app_name.phar");
 
