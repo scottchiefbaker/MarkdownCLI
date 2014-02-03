@@ -16,3 +16,7 @@ STDIN mode:
 ```
 cat README.md | parsedown
 ```
+
+Requires
+--------
+PHP 5.3.0 or greater must be installed
