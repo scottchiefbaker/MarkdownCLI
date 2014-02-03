@@ -9,4 +9,15 @@ $phar["index.php"]     = file_get_contents("index.php");
 $phar["Parsedown.php"] = file_get_contents("Parsedown.php");
 $phar["common.php"]    = file_get_contents("common.php");
 
-$phar->setStub($phar->createDefaultStub("index.php"));
+// start buffering. Mandatory to modify stub.
+$phar->startBuffering();
+
+$def_stub = $phar->createDefaultStub("index.php");
+
+// Create a custom stub to add the shebang
+$stub = "#!/usr/bin/env php \n" . $def_stub;
+
+// Add the stub
+$phar->setStub($stub);
+
+$phar->stopBuffering();
