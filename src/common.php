@@ -8,7 +8,7 @@ if (preg_match("/--help|-h/",$args)) {
 	exit;
 }
 
-include "phar://parsedown.phar/Parsedown.php";
+include "phar://markdown.phar/Parsedown.php";
 
 ////////////////////////////////////////////////
 
@@ -27,6 +27,7 @@ function usage() {
 	global $version;
 
 	print "MarkdownCLI Version: $version\n";
-	print "  Parsedown Version: $version\n\n";
+	//print "  Parsedown Version: $version\n";
+	print "\n";
 	print "Usage: parsedown input.md\n";
 }

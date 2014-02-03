@@ -1,3 +1,3 @@
 <?php
 
-require_once "phar://parsedown.phar/common.php";
+require_once "phar://markdown.phar/common.php";
