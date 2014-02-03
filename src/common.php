@@ -24,7 +24,8 @@ if (isset($argv[1])) {
 print Parsedown::instance()->parse($str);
 
 function usage() {
-	print "Usage:\n";
-	print "   File mode: parsedown [input.md]\n";
-	print "  STDIN mode: cat input.md | parsedown\n";
+	global $version;
+
+	print "ParsedownCLI Version: $version\n\n";
+	print "Usage: parsedown input.md\n";
 }
