@@ -9,12 +9,12 @@ Usage
 
 File mode:
 ```
-parsedown README.md
+markdown README.md
 ```
 
 STDIN mode:
 ```
-cat README.md | parsedown
+cat README.md | markdown
 ```
 
 Requires
