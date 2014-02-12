@@ -29,5 +29,5 @@ function usage() {
 	print "MarkdownCLI Version: $version\n";
 	//print "  Parsedown Version: $version\n";
 	print "\n";
-	print "Usage: parsedown input.md\n";
+	print "Usage: markdown input.md\n";
 }
