@@ -15,10 +15,16 @@ include "phar://markdown.phar/Parsedown.php";
 // From a file
 //if (isset($argv[1]) && is_readable($argv[1])) {
 if (isset($argv[1])) {
-   $str = file_get_contents($argv[1]);
-// From STDIN
+
+	$str = @file_get_contents($argv[1]);
+	// From STDIN
+
+	if ($str === false) {
+		print "File '" . $argv[1] . "' is not readable\n";
+		exit(10);
+	}
 } else {
-   $str = file_get_contents("php://stdin");
+	$str = file_get_contents("php://stdin");
 }
 
 print Parsedown::instance()->parse($str);
