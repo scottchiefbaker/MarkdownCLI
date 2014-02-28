@@ -1,8 +1,9 @@
 <?php
 
-$args = join(" ",$argv);
-$version = "0.1";
+$version           = "0.1";
+$parsedown_version = "0.9.4";
 
+$args = join(" ",$argv);
 if (preg_match("/--help|-h/",$args)) {
 	usage();
 	exit;
@@ -20,20 +21,24 @@ if (isset($argv[1])) {
 	// From STDIN
 
 	if ($str === false) {
-		print "File '" . $argv[1] . "' is not readable\n";
+		print "Error: file '" . $argv[1] . "' is not readable\n";
 		exit(10);
 	}
 } else {
 	$str = file_get_contents("php://stdin");
 }
 
-print Parsedown::instance()->parse($str);
+$parsedown = new Parsedown();
+print $parsedown->parse($str);
+
+////////////////////////////////////////////////
 
 function usage() {
 	global $version;
+	global $parsedown_version;
 
 	print "MarkdownCLI Version: $version\n";
-	//print "  Parsedown Version: $version\n";
+	print "  Parsedown Version: $parsedown_version\n";
 	print "\n";
 	print "Usage: markdown input.md\n";
 }
