@@ -1,15 +1,15 @@
 <?php
 
-$version           = "0.1";
-$parsedown_version = "0.9.4";
+include "phar://markdown.phar/Parsedown.php";
+
+$version           = "0.2";
+$parsedown_version = Parsedown::version;
 
 $args = join(" ",$argv);
 if (preg_match("/--help|-h/",$args)) {
 	usage();
 	exit;
 }
-
-include "phar://markdown.phar/Parsedown.php";
 
 ////////////////////////////////////////////////
 
