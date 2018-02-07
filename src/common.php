@@ -2,7 +2,7 @@
 
 include "phar://markdown.phar/Parsedown.php";
 
-$version           = "0.2";
+$version           = "0.2.1";
 $parsedown_version = Parsedown::version;
 
 $args = join(" ",$argv);
